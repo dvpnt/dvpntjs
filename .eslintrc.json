@@ -1,0 +1,6 @@
+{
+	"extends": "dvpnt",
+	"env": {
+		"es6": true
+	}
+}

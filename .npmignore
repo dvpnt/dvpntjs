@@ -1,0 +1,7 @@
+.npmignore
+.gitignore
+*.tgz
+*.log
+.eslintrc.json
+.eslintignore
+.eslintcache

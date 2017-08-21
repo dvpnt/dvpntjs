@@ -1,0 +1,39 @@
+{
+  "name": "dvpntjs",
+  "version": "0.0.1",
+  "description": "a collection of utilities used in dvpnt projects",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build-js": "babel src -d dist",
+    "build": "run-s -s clean build-js",
+    "sync": "npm install && npm prune",
+    "lint": "eslint --ext js --cache ./",
+    "clean": "rimraf dist",
+    "prepublish": "run-s -s lint build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvpnt/dvpntjs.git"
+  },
+  "keywords": [
+    "dvpnt"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvpnt/dvpntjs/issues"
+  },
+  "homepage": "https://github.com/dvpnt/dvpntjs#readme",
+  "dependencies": {
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-es2015": "6.22.0",
+    "eslint": "3.19.0",
+    "eslint-config-dvpnt": "1.6.0",
+    "npm-run-all": "2.1.1",
+    "nrun": "0.1.7",
+    "rimraf": "2.6.1"
+  }
+}
