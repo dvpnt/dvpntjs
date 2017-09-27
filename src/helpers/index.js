@@ -2,4 +2,6 @@
 
 var _ = require('underscore');
 
-_(exports).extend({});
+_(exports).extend(
+	require('./common')
+);
