@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = {};
+exports.helpers = require('./helpers');
