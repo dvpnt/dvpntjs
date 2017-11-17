@@ -1,6 +1,7 @@
 'use strict';
 
-var url = require('url');
+var url = require('url'),
+	punycode = require('punycode');
 
 exports.extractDomain = function(parsingUrl, withoutWeb) {
 	var domain = url.parse(parsingUrl).hostname;
@@ -9,7 +10,7 @@ exports.extractDomain = function(parsingUrl, withoutWeb) {
 		domain = domain.slice(4);
 	}
 
-	return domain;
+	return punycode.toUnicode(domain);
 };
 
 exports.capitalize = function(str, lowercaseRest) {
